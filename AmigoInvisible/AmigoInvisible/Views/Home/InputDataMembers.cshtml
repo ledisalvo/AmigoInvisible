@@ -1,0 +1,63 @@
+﻿@model AmigoInvisible.Models.AttendeeModel
+
+@{
+    ViewBag.Title = "Paso 1 - Datos del organizador";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>Primero ingresá tus datos como organizador/a del sorteo...</h3>
+
+<div>
+    @using (Html.BeginForm("SaveOrganizerData", "Home", FormMethod.Post, new { @class = "form" }))
+    {
+        <div class="container">
+            <div class="form-group row justify-content-center">
+                <div class="col-md-4">
+                    <label for="name">Nombre</label>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", id="name", placeholder="Ingresá tu nombre"})
+                </div>
+                <div class="col-md-4">
+                    <label for="phone">Número de teléfono</label>
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", id = "phone", placeholder = "Ingresá tu número de teléfono" })
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+     }
+    @*<form onsubmit="saveDataOrganizer">
+            <div class="container">
+                <div class="form-group row justify-content-center">
+                    <div class="col-md-4">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ingresá tu nombre">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="exampleInputEmail1">Número de teléfono</label>
+                        <input type="text" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Ingresá tu número de teléfono">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>*@
+</div>
+
+<script type="text/javascript">
+    function saveDataOrganizer() {
+
+        let model = {
+            name = document.getElementById("name"),
+            phone = document.getElementById("phone"),
+        };
+
+        $.ajax({
+                url: @Url.Action("SaveOrganizerData", "Home"),
+                data: model,
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+        });
+
+        return false;
+    }
+</script>
+
+
+

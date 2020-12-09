@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QPmjpmrAFYySoYXmPcsYBevpSp7ycbObkRM6iOt0+h90M9h3RvsqbOmsyLGYGk6kuD+H1V8xdvTEXVZaZ235SQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Leonardo Di Salvo\\Documents\\GitHub\\AmigoInvisible\\AmigoInvisible\\Service\\Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Leonardo Di Salvo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Leonardo Di Salvo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
